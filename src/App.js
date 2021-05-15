@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import './App.css';
 import { Provider, useAtom } from 'jotai';
 // atoms
-import { countAtom } from './Atoms';
-import { countryAtom } from './Atoms';
+import { countAtom, countryAtom, isPrimaryAtom } from './Atoms';
+
 
 // components
 const Counter = () => {
@@ -31,14 +31,26 @@ const Country = () => {
   );
 };
 
+const ColorButton = () => {
+  const [isPrimary, setIsPrimary] = useAtom(isPrimaryAtom);
+  const title = isPrimary ? "Primary" : "Secondary";
+
+  const handleClick = () => setIsPrimary(!isPrimary);
+
+  return <button className={ isPrimary ? "primary-button" : "secondary-button"} onClick={handleClick}>{title}</button>
+}
 
 const App = () => {
   return (
     <Provider>
       <div className="App">
-        <Counter />
-        <hr />
-        <Country />
+        <Suspense fallback={<h2>Loading...</h2>}>
+          <Counter />
+          <hr />
+          <Country />
+          <hr />
+          <ColorButton />
+        </Suspense>
       </div>
     </Provider>
   );
