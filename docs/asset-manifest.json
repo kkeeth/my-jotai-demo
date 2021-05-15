@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/my-jotai-demo/static/css/main.f91f2014.chunk.css",
-    "main.js": "/my-jotai-demo/static/js/main.56cd2e7b.chunk.js",
-    "main.js.map": "/my-jotai-demo/static/js/main.56cd2e7b.chunk.js.map",
+    "main.js": "/my-jotai-demo/static/js/main.696cec26.chunk.js",
+    "main.js.map": "/my-jotai-demo/static/js/main.696cec26.chunk.js.map",
     "runtime-main.js": "/my-jotai-demo/static/js/runtime-main.d6119d78.js",
     "runtime-main.js.map": "/my-jotai-demo/static/js/runtime-main.d6119d78.js.map",
     "static/js/2.64ade9cc.chunk.js": "/my-jotai-demo/static/js/2.64ade9cc.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.d6119d78.js",
     "static/js/2.64ade9cc.chunk.js",
     "static/css/main.f91f2014.chunk.css",
-    "static/js/main.56cd2e7b.chunk.js"
+    "static/js/main.696cec26.chunk.js"
   ]
 }
