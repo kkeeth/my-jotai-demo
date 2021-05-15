@@ -1,10 +1,9 @@
 import React from 'react';
 import './App.css';
-import { Provider, atom, useAtom } from 'jotai';
-
+import { Provider, useAtom } from 'jotai';
 // atoms
-const countAtom = atom(0);
-const countryAtom = atom('Japan');
+import { countAtom } from './Atoms';
+import { countryAtom } from './Atoms';
 
 // components
 const Counter = () => {
