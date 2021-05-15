@@ -1,8 +1,10 @@
+import React from 'react';
 import './App.css';
 import { Provider, atom, useAtom } from 'jotai';
 
 // atoms
 const countAtom = atom(0);
+const countryAtom = atom('Japan');
 
 // components
 const Counter = () => {
@@ -17,11 +19,27 @@ const Counter = () => {
   );
 };
 
+const Country = () => {
+  const [text, setText] = useAtom(countryAtom);
+  const handleInput = (e) => setText(e.target.value);
+
+  return (
+    <>
+      <h2>Normal: {text}</h2>
+      <h2>Uppercase: {text.toUpperCase()}</h2>
+      <input value={text} onChange={handleInput} />
+    </>
+  );
+};
+
+
 const App = () => {
   return (
     <Provider>
       <div className="App">
         <Counter />
+        <hr />
+        <Country />
       </div>
     </Provider>
   );
