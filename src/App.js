@@ -37,7 +37,14 @@ const ColorButton = () => {
 
   const handleClick = () => setIsPrimary(!isPrimary);
 
-  return <button className={ isPrimary ? "primary-button" : "secondary-button"} onClick={handleClick}>{title}</button>
+  return (
+    <button
+      className={ isPrimary ? "primary-button" : "secondary-button"}
+      onClick={handleClick}
+    >
+      {title}
+    </button>
+  )
 }
 
 const App = () => {
