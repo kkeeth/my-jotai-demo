@@ -8,12 +8,16 @@ import { countAtom, countryAtom, isPrimaryAtom } from './Atoms';
 // components
 const Counter = () => {
   const [count, setCount] = useAtom(countAtom)
-  const handleClick = () => setCount((value) => value + 1)
+  const handlePlus = () => setCount((value) => value + 1)
+  const handleMinus = () => setCount((value) => value - 1)
 
   return (
     <>
       <h1>{count} </h1>
-      <button onClick={handleClick}>one up</button>
+      <div className="buttons">
+        <button onClick={handlePlus}>one up</button>
+        <button onClick={handleMinus}>one down</button>
+      </div>
     </>
   );
 };
