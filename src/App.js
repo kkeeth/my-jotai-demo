@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import { Provider, atom, useAtom } from 'jotai';
 
-function App() {
+// atoms
+const countAtom = atom(0);
+
+// components
+const Counter = () => {
+  const [count, setCount] = useAtom(countAtom)
+  const handleClick = () => setCount((value) => value + 1)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>{count} </h1>
+      <button onClick={handleClick}>one up</button>
+    </>
+  );
+};
+
+const App = () => {
+  return (
+    <Provider>
+      <div className="App">
+        <Counter />
+      </div>
+    </Provider>
   );
 }
 
