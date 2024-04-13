@@ -5,7 +5,7 @@
   "homepage": "https://kkeeth.github.io/my-jotai-demo/",
   "dependencies": {
     "@testing-library/jest-dom": "6.2.1",
-    "@testing-library/react": "14.1.2",
+    "@testing-library/react": "15.0.2",
     "@testing-library/user-event": "14.5.2",
     "jotai": "2.6.2",
     "react": "18.2.0",
